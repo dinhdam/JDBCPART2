@@ -943,23 +943,47 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="239" parent="2" name="person"/>
-    <column id="240" parent="239" name="id">
+    <table id="240" parent="2" name="student"/>
+    <column id="241" parent="239" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="239" name="firstname">
+    <column id="242" parent="239" name="firstname">
       <Position>2</Position>
       <DataType>varchar(55)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="239" name="lastname">
+    <column id="243" parent="239" name="lastname">
       <Position>3</Position>
       <DataType>varchar(55)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="243" parent="239" name="PRIMARY">
+    <key id="244" parent="239" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="245" parent="240" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="240" name="MSV">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="240" name="class">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="248" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

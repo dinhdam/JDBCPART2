@@ -2,7 +2,7 @@ package com.daoImpl;
 
 import com.dao.PersonDao;
 import com.entities.Person;
-import com.until.ConnectionConfiguration;
+
 
 import java.sql.*;
 import java.util.List;
@@ -15,16 +15,14 @@ public class PersonDaoImpl implements PersonDao {
 
     @Override
     public void creatPersonTable() {
-
-
-
         try {
-            // connnect to database 'testdb'
+            // connnect to database 'company'
             Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
             // crate statement
             Statement stmt = conn.createStatement();
             // get data from table 'student'
-            ResultSet rs = stmt.executeQuery("select * from person");
+            ResultSet rs = stmt.executeQuery("select * from person ");
+
             // show data
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + "  " + rs.getString(2)
